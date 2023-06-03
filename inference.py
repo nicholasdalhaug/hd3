@@ -126,7 +126,7 @@ def main():
     if os.path.isfile(args.model_path):
         logger.info("=> loading checkpoint '{}'".format(args.model_path))
         checkpoint = torch.load(args.model_path)
-        model.load_state_dict(checkpoint['state_dict'], strict=True)
+        model.load_state_dict(checkpoint['state_dict'], strict=False)
         logger.info("=> loaded checkpoint '{}'".format(args.model_path))
     else:
         raise RuntimeError("=> no checkpoint found at '{}'".format(

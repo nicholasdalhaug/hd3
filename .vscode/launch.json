@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug test.sh",
+            "type": "python",
+            "request": "launch",
+            "program": "inference.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--task", "stereo",
+                "--data_root", "input",
+                "--data_list", "lists/input_test.txt",
+                "--context",
+                "--encoder", "dlaup",
+                "--decoder", "hda",
+                "--batch_size", "1",
+                "--workers", "16",
+                "--flow_format", "png",
+                "--model_path", "model_zoo/hd3sc_things_kitti-368975c0.pth",
+                "--save_folder", "output",
+            ]
+        }
+    ]
+}
